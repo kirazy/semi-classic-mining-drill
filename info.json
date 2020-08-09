@@ -1,0 +1,13 @@
+{
+  "name": "semi-classic-mining-drill",
+  "version": "0.18.1",
+  "factorio_version": "0.18",
+  "title": "Semi-Classic Mining Drill",
+  "author": "Kirazy",
+  "contact": "kirazy@live.com",
+  "description": "Replaces the new mining drill from 0.18.44 with the previous new mining drill from versions 0.18.31 to 0.18.43.",
+  "dependencies": 
+  [	
+    "base >= 0.18.44"
+  ]
+}
