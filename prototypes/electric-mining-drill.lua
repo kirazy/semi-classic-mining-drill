@@ -1,5 +1,5 @@
 -- Copyright (c) 2020 Kirazy
--- Part of Classic Mining Drill
+-- Part of Semi-Classic Mining Drill
 --     
 -- See LICENSE.md in the project directory for license information.
 
@@ -51,7 +51,7 @@ function electric_mining_drill_smoke()
     return
     {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke.png",
         line_length = 6,
         width = 24,
         height = 38,
@@ -61,7 +61,7 @@ function electric_mining_drill_smoke()
         shift = util.by_pixel(0, 2),
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-smoke.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-smoke.png",
             line_length = 6,
             width = 48,
             height = 72,
@@ -78,7 +78,7 @@ function electric_mining_drill_smoke_front()
     return
     {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke-front.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke-front.png",
         line_length = 6,
         width = 76,
         height = 68,
@@ -88,7 +88,7 @@ function electric_mining_drill_smoke_front()
         shift = util.by_pixel(-4, 8),
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-smoke-front.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-smoke-front.png",
             line_length = 6,
             width = 148,
             height = 132,
@@ -105,7 +105,7 @@ function electric_mining_drill_animation()
     return
     {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill.png",
         line_length = 6,
         width = 98,
         height = 80,
@@ -116,7 +116,7 @@ function electric_mining_drill_animation()
         shift = util.by_pixel(0, -22),
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill.png",
             line_length = 6,
             width = 194,
             height = 154,
@@ -134,7 +134,7 @@ function electric_mining_drill_shadow_animation()
     return
     {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-shadow.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-shadow.png",
         line_length = 7,
         width = 118,
         height = 28,
@@ -145,7 +145,7 @@ function electric_mining_drill_shadow_animation()
         shift = util.by_pixel(48, 6),
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-shadow.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-shadow.png",
             line_length = 7,
             width = 232,
             height = 50,
@@ -163,7 +163,7 @@ function electric_mining_drill_horizontal_animation()
     return
     {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal.png",
         line_length = 6,
         width = 54,
         height = 92,
@@ -174,7 +174,7 @@ function electric_mining_drill_horizontal_animation()
         shift = util.by_pixel(-4, -28),
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal.png",
             line_length = 6,
             width = 104,
             height = 178,
@@ -192,7 +192,7 @@ function electric_mining_drill_horizontal_front_animation()
     return
     {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-front.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-front.png",
         line_length = 6,
         width = 28,
         height = 66,
@@ -203,7 +203,7 @@ function electric_mining_drill_horizontal_front_animation()
         shift = util.by_pixel(14, -22),
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal-front.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal-front.png",
             line_length = 6,
             width = 54,
             height = 136,
@@ -221,7 +221,7 @@ function electric_mining_drill_horizontal_shadow_animation()
     return
     {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-shadow.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-shadow.png",
         line_length = 7,
         width = 118,
         height = 68,
@@ -232,7 +232,7 @@ function electric_mining_drill_horizontal_shadow_animation()
         shift = util.by_pixel(48, 6),
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal-shadow.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-horizontal-shadow.png",
             line_length = 7,
             width = 236,
             height = 138,
@@ -273,14 +273,14 @@ function electric_mining_drill_status_leds_working_visualisation()
         always_draw = true,
         draw_as_sprite = true,
         north_animation = {
-            filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-light.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-light.png",
             width = 16,
             height = 18,
             blend_mode = led_blend_mode,
             tint = led_tint,
             shift = util.by_pixel(26, -70),
             hr_version = {
-                filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-light.png",
+                filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-light.png",
                 width = 30,
                 height = 32,
                 blend_mode = led_blend_mode,
@@ -290,14 +290,14 @@ function electric_mining_drill_status_leds_working_visualisation()
             }
         },
         east_animation = {
-            filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-light.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-light.png",
             width = 18,
             height = 16,
             blend_mode = led_blend_mode,
             tint = led_tint,
             shift = util.by_pixel(40, -44),
             hr_version = {
-                filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-light.png",
+                filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-light.png",
                 width = 32,
                 height = 34,
                 blend_mode = led_blend_mode,
@@ -307,14 +307,14 @@ function electric_mining_drill_status_leds_working_visualisation()
             }
         },
         south_animation = {
-            filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-light.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-light.png",
             width = 16,
             height = 16,
             blend_mode = led_blend_mode,
             tint = led_tint,
             shift = util.by_pixel(26, 10),
             hr_version = {
-                filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-light.png",
+                filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-light.png",
                 width = 32,
                 height = 30,
                 blend_mode = led_blend_mode,
@@ -324,14 +324,14 @@ function electric_mining_drill_status_leds_working_visualisation()
             }
         },
         west_animation = {
-            filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-light.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-light.png",
             width = 16,
             height = 16,
             blend_mode = led_blend_mode,
             tint = led_tint,
             shift = util.by_pixel(-42, -44),
             hr_version = {
-                filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-light.png",
+                filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-light.png",
                 width = 32,
                 height = 34,
                 blend_mode = led_blend_mode,
@@ -361,6 +361,12 @@ local electric_mining_drill_secondary_light = electric_mining_drill_add_light_of
     light = { intensity = 0.8, size = 1.5, color={r=1, g=1, b=1}, minimum_darkness = 0.1 }
 })
 
+local circuit_connectors = circuit_connector_definitions.create(universal_connector_template, {
+    { variation = 4, main_offset = util.by_pixel(-42, -62), shadow_offset = util.by_pixel(0, -34), show_shadow = false },
+    { variation = 2, main_offset = util.by_pixel(36, -1), shadow_offset = util.by_pixel(70, 35), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(-31, 4), shadow_offset = util.by_pixel(0, 34), show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-32, 5), shadow_offset = util.by_pixel(0, 35), show_shadow = false }
+})
 
 ----------------------------------------------------------------------------------------------------
 -- Restore the mining drill
@@ -409,12 +415,92 @@ mining_drill_explosion.icon = "__semi-classic-mining-drill__/graphics/icon/elect
 mining_drill_explosion.icon_size = 64
 mining_drill_explosion.icon_mipmaps = 4
 mining_drill_explosion.height = 0
-mining_drill_explosion.animations = explosion_animations.small_explosion()
-mining_drill_explosion.light = default_light(20)
+mining_drill_explosion.animations = {
+    {
+        filename = "__base__/graphics/entity/small-explosion/small-explosion-1.png",
+        priority = "high",
+        line_length = 6,
+        width = 44,
+        height = 90,
+        frame_count = 24,
+        animation_speed = 0.5,
+        shift = util.by_pixel(-1,-24),
+        hr_version =
+        {
+            filename = "__base__/graphics/entity/small-explosion/hr-small-explosion-1.png",
+            priority = "high",
+            line_length = 6,
+            width = 88,
+            height = 178,
+            frame_count = 24,
+            animation_speed = 0.5,
+            shift = util.by_pixel(-1,-24),
+            scale = 0.5,
+        }
+    },
+    {
+        filename = "__base__/graphics/entity/small-explosion/small-explosion-2.png",
+        priority = "high",
+        line_length = 6,
+        width = 46,
+        height = 76,
+        frame_count = 24,
+        animation_speed = 0.5,
+        shift = util.by_pixel(2,-8),
+        hr_version =
+        {
+            filename = "__base__/graphics/entity/small-explosion/hr-small-explosion-2.png",
+            priority = "high",
+            line_length = 6,
+            width = 92,
+            height = 152,
+            frame_count = 24,
+            animation_speed = 0.5,
+            shift = util.by_pixel(2,-7.5),
+            scale = 0.5,
+        }
+    },
+}
+
+mining_drill_explosion.light = {
+    intensity = 1,
+    size = 20,
+    color = {r = 1.0, g = 1.0, b = 1.0}
+}
+
 mining_drill_explosion.smoke = "smoke-fast"
 mining_drill_explosion.smoke_count = 2
 mining_drill_explosion.smoke_slow_down_factor = 1
-mining_drill_explosion.sound = sounds.medium_explosion(0.4)
+mining_drill_explosion.sound = {
+    aggregation = {
+        max_count = 1,
+        remove = true
+    },
+    audible_distance_modifier = 0.7,
+    variations = {
+        {
+            filename = "__base__/sound/fight/medium-explosion-1.ogg",
+            volume = 0.4
+        },
+        {
+            filename = "__base__/sound/fight/medium-explosion-2.ogg",
+            volume = 0.4
+        },
+        {
+            filename = "__base__/sound/fight/medium-explosion-3.ogg",
+            volume = 0.4
+        },
+        {
+            filename = "__base__/sound/fight/medium-explosion-4.ogg",
+            volume = 0.4
+        },
+        {
+            filename = "__base__/sound/fight/medium-explosion-5.ogg",
+            volume = 0.4
+        }
+    }
+}
+
 mining_drill_explosion.created_effect = {
     type = "direct",
     action_delivery = {
@@ -507,7 +593,7 @@ mining_drill.graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N.png",
                     line_length = 1,
                     width = 98,
                     height = 122,
@@ -518,7 +604,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N.png",
                         line_length = 1,
                         width = 194,
                         height = 242,
@@ -532,7 +618,7 @@ mining_drill.graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-output.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-output.png",
                     line_length = 5,
                     width = 38,
                     height = 34,
@@ -542,7 +628,7 @@ mining_drill.graphics_set =
                     shift = util.by_pixel(-2, -44),
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-output.png",
                         line_length = 5,
                         width = 72,
                         height = 66,
@@ -555,7 +641,7 @@ mining_drill.graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-shadow.png",
                     line_length = 1,
                     width = 136,
                     height = 102,
@@ -566,7 +652,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-shadow.png",
                         line_length = 1,
                         width = 274,
                         height = 206,
@@ -584,7 +670,7 @@ mining_drill.graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E.png",
                     line_length = 1,
                     width = 98,
                     height = 50,
@@ -595,7 +681,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E.png",
                         line_length = 1,
                         width = 194,
                         height = 94,
@@ -609,7 +695,7 @@ mining_drill.graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-output.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-output.png",
                     line_length = 5,
                     width = 26,
                     height = 26,
@@ -619,7 +705,7 @@ mining_drill.graphics_set =
                     shift = util.by_pixel(30, -10),
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-output.png",
                         line_length = 5,
                         width = 50,
                         height = 56,
@@ -632,7 +718,7 @@ mining_drill.graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-shadow.png",
                     line_length = 1,
                     width = 138,
                     height = 86,
@@ -643,7 +729,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-shadow.png",
                         line_length = 1,
                         width = 276,
                         height = 170,
@@ -661,7 +747,7 @@ mining_drill.graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S.png",
                     line_length = 1,
                     width = 98,
                     height = 122,
@@ -672,7 +758,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S.png",
                         line_length = 1,
                         width = 194,
                         height = 240,
@@ -686,7 +772,7 @@ mining_drill.graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-shadow.png",
                     line_length = 1,
                     width = 136,
                     height = 102,
@@ -697,7 +783,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-shadow.png",
                         line_length = 1,
                         width = 274,
                         height = 204,
@@ -715,7 +801,7 @@ mining_drill.graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W.png",
                     line_length = 1,
                     width = 98,
                     height = 50,
@@ -726,7 +812,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W.png",
                         line_length = 1,
                         width = 194,
                         height = 94,
@@ -740,7 +826,7 @@ mining_drill.graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-output.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-output.png",
                     line_length = 5,
                     width = 24,
                     height = 28,
@@ -750,7 +836,7 @@ mining_drill.graphics_set =
                     shift = util.by_pixel(-30, -12),
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-output.png",
                         line_length = 5,
                         width = 50,
                         height = 56,
@@ -763,7 +849,7 @@ mining_drill.graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-shadow.png",
                     line_length = 1,
                     width = 144,
                     height = 86,
@@ -774,7 +860,7 @@ mining_drill.graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-shadow.png",
                         line_length = 1,
                         width = 282,
                         height = 170,
@@ -828,7 +914,7 @@ mining_drill.graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-smoke.png",
                         line_length = 5,
                         width = 26,
                         height = 30,
@@ -838,7 +924,7 @@ mining_drill.graphics_set =
                         shift = util.by_pixel(0, -44),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-smoke.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-smoke.png",
                             line_length = 5,
                             width = 46,
                             height = 58,
@@ -909,7 +995,7 @@ mining_drill.graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-smoke.png",
                         line_length = 5,
                         width = 28,
                         height = 28,
@@ -919,7 +1005,7 @@ mining_drill.graphics_set =
                         shift = util.by_pixel(24, -12),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-smoke.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-smoke.png",
                             line_length = 5,
                             width = 52,
                             height = 56,
@@ -936,7 +1022,7 @@ mining_drill.graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-smoke.png",
                         line_length = 5,
                         width = 24,
                         height = 18,
@@ -946,7 +1032,7 @@ mining_drill.graphics_set =
                         shift = util.by_pixel(-2, 20),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-smoke.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-smoke.png",
                             line_length = 5,
                             width = 48,
                             height = 36,
@@ -963,7 +1049,7 @@ mining_drill.graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-smoke.png",
                         line_length = 5,
                         width = 26,
                         height = 30,
@@ -973,7 +1059,7 @@ mining_drill.graphics_set =
                         shift = util.by_pixel(-26, -12),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-smoke.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-smoke.png",
                             line_length = 5,
                             width = 46,
                             height = 54,
@@ -994,7 +1080,7 @@ mining_drill.graphics_set =
             north_animation = nil,
             east_animation = {
                 priority = "high",
-                filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-front.png",
+                filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-front.png",
                 line_length = 1,
                 width = 106,
                 height = 94,
@@ -1004,7 +1090,7 @@ mining_drill.graphics_set =
                 shift = util.by_pixel(2, 2),
                 hr_version = {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-front.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-front.png",
                     line_length = 1,
                     width = 208,
                     height = 186,
@@ -1019,7 +1105,7 @@ mining_drill.graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-output.png",
                         line_length = 5,
                         width = 42,
                         height = 28,
@@ -1028,7 +1114,7 @@ mining_drill.graphics_set =
                         shift = util.by_pixel(-2, 34),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-output.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-output.png",
                             line_length = 5,
                             width = 82,
                             height = 56,
@@ -1040,7 +1126,7 @@ mining_drill.graphics_set =
                     },
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-front.png",
                         line_length = 1,
                         width = 86,
                         height = 24,
@@ -1050,7 +1136,7 @@ mining_drill.graphics_set =
                         shift = util.by_pixel(0, 12),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-front.png",
                             line_length = 1,
                             width = 172,
                             height = 42,
@@ -1065,7 +1151,7 @@ mining_drill.graphics_set =
             },
             west_animation = {
                 priority = "high",
-                filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-front.png",
+                filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-front.png",
                 line_length = 1,
                 width = 106,
                 height = 94,
@@ -1075,7 +1161,7 @@ mining_drill.graphics_set =
                 shift = util.by_pixel(-4, 2),
                 hr_version = {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-front.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-front.png",
                     line_length = 1,
                     width = 210,
                     height = 190,
@@ -1124,7 +1210,7 @@ mining_drill.wet_mining_graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet.png",
                     line_length = 1,
                     width = 98,
                     height = 122,
@@ -1136,7 +1222,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet.png",
                         line_length = 1,
                         width = 194,
                         height = 242,
@@ -1150,7 +1236,7 @@ mining_drill.wet_mining_graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-output.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-output.png",
                     line_length = 5,
                     width = 38,
                     height = 34,
@@ -1161,7 +1247,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-output.png",
                         line_length = 5,
                         width = 72,
                         height = 66,
@@ -1174,7 +1260,7 @@ mining_drill.wet_mining_graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-shadow.png",
                     line_length = 1,
                     width = 136,
                     height = 110,
@@ -1186,7 +1272,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-shadow.png",
                         line_length = 1,
                         width = 276,
                         height = 222,
@@ -1204,7 +1290,7 @@ mining_drill.wet_mining_graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet.png",
                     line_length = 1,
                     width = 98,
                     height = 50,
@@ -1216,7 +1302,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet.png",
                         line_length = 1,
                         width = 194,
                         height = 94,
@@ -1230,7 +1316,7 @@ mining_drill.wet_mining_graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-output.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-output.png",
                     line_length = 5,
                     width = 24,
                     height = 28,
@@ -1241,7 +1327,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-output.png",
                         line_length = 5,
                         width = 50,
                         height = 56,
@@ -1254,7 +1340,7 @@ mining_drill.wet_mining_graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-shadow.png",
                     line_length = 1,
                     width = 144,
                     height = 98,
@@ -1266,7 +1352,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-shadow.png",
                         line_length = 1,
                         width = 284,
                         height = 194,
@@ -1284,7 +1370,7 @@ mining_drill.wet_mining_graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet.png",
                     line_length = 1,
                     width = 98,
                     height = 122,
@@ -1296,7 +1382,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet.png",
                         line_length = 1,
                         width = 194,
                         height = 240,
@@ -1310,7 +1396,7 @@ mining_drill.wet_mining_graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-shadow.png",
                     line_length = 1,
                     width = 136,
                     height = 102,
@@ -1322,7 +1408,7 @@ mining_drill.wet_mining_graphics_set =
                     hr_version =
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-shadow.png",
                         line_length = 1,
                         width = 276,
                         height = 204,
@@ -1340,7 +1426,7 @@ mining_drill.wet_mining_graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet.png",
                     line_length = 1,
                     width = 98,
                     height = 50,
@@ -1351,7 +1437,7 @@ mining_drill.wet_mining_graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet.png",
                         line_length = 1,
                         width = 194,
                         height = 94,
@@ -1365,7 +1451,7 @@ mining_drill.wet_mining_graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-output.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-output.png",
                     line_length = 5,
                     width = 26,
                     height = 26,
@@ -1375,7 +1461,7 @@ mining_drill.wet_mining_graphics_set =
                     shift = util.by_pixel(30, -10),
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-output.png",
                         line_length = 5,
                         width = 50,
                         height = 56,
@@ -1388,7 +1474,7 @@ mining_drill.wet_mining_graphics_set =
                 },
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-shadow.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-shadow.png",
                     line_length = 1,
                     width = 138,
                     height = 98,
@@ -1399,7 +1485,7 @@ mining_drill.wet_mining_graphics_set =
                     repeat_count = 5,
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-shadow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-shadow.png",
                         line_length = 1,
                         width = 276,
                         height = 194,
@@ -1453,7 +1539,7 @@ mining_drill.wet_mining_graphics_set =
             layers = {
                 {
                     priority = "high",
-                    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-smoke.png",
+                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-smoke.png",
                     line_length = 5,
                     width = 26,
                     height = 30,
@@ -1463,7 +1549,7 @@ mining_drill.wet_mining_graphics_set =
                     shift = util.by_pixel(0, -44),
                     hr_version = {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-smoke.png",
                         line_length = 5,
                         width = 46,
                         height = 58,
@@ -1530,7 +1616,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-smoke.png",
                         line_length = 5,
                         width = 28,
                         height = 28,
@@ -1540,7 +1626,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(24, -12),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-smoke.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-smoke.png",
                             line_length = 5,
                             width = 52,
                             height = 56,
@@ -1557,7 +1643,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-smoke.png",
                         line_length = 5,
                         width = 24,
                         height = 18,
@@ -1567,7 +1653,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, 20),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-smoke.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-smoke.png",
                             line_length = 5,
                             width = 48,
                             height = 36,
@@ -1584,7 +1670,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-smoke.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-smoke.png",
                         line_length = 5,
                         width = 26,
                         height = 30,
@@ -1594,7 +1680,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-26, -12),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-smoke.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-smoke.png",
                             line_length = 5,
                             width = 46,
                             height = 54,
@@ -1618,7 +1704,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-window-background-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-window-background-front.png",
                         line_length = 1,
                         width = 68,
                         height = 14,
@@ -1628,7 +1714,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, -18),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-window-background-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-window-background-front.png",
                             line_length = 1,
                             width = 132,
                             height = 28,
@@ -1646,7 +1732,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-window-background.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-window-background.png",
                         line_length = 1,
                         width = 68,
                         height = 46,
@@ -1656,7 +1742,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, -34),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-window-background.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-window-background.png",
                             line_length = 1,
                             width = 132,
                             height = 88,
@@ -1679,7 +1765,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-window-background.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-window-background.png",
                         line_length = 1,
                         width = 14,
                         height = 12,
@@ -1689,7 +1775,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(2, 20),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-window-background.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-window-background.png",
                             line_length = 1,
                             width = 30,
                             height = 20,
@@ -1706,7 +1792,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-window-background-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-window-background-front.png",
                         line_length = 1,
                         width = 42,
                         height = 44,
@@ -1716,7 +1802,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(12, 0),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-window-background-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-window-background-front.png",
                             line_length = 1,
                             width = 88,
                             height = 86,
@@ -1734,7 +1820,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-window-background-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-window-background-front.png",
                         line_length = 1,
                         width = 44,
                         height = 44,
@@ -1744,7 +1830,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-12, 0),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-window-background-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-window-background-front.png",
                             line_length = 1,
                             width = 86,
                             height = 86,
@@ -1768,7 +1854,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-background-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-background-front.png",
                         line_length = 1,
                         width = 66,
                         height = 20,
@@ -1778,7 +1864,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(0, -18),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-background-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-background-front.png",
                             line_length = 1,
                             width = 130,
                             height = 36,
@@ -1796,7 +1882,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-fluid-background.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-fluid-background.png",
                         line_length = 1,
                         width = 66,
                         height = 48,
@@ -1806,7 +1892,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(0, -32),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-fluid-background.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-fluid-background.png",
                             line_length = 1,
                             width = 130,
                             height = 96,
@@ -1830,7 +1916,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-background.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-background.png",
                         line_length = 1,
                         width = 14,
                         height = 10,
@@ -1840,7 +1926,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(2, 22),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-background.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-background.png",
                             line_length = 1,
                             width = 28,
                             height = 22,
@@ -1857,7 +1943,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-fluid-background-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-fluid-background-front.png",
                         line_length = 1,
                         width = 42,
                         height = 42,
@@ -1867,7 +1953,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(12, 0),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-fluid-background-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-fluid-background-front.png",
                             line_length = 1,
                             width = 82,
                             height = 88,
@@ -1885,7 +1971,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-fluid-background-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-fluid-background-front.png",
                         line_length = 1,
                         width = 42,
                         height = 42,
@@ -1895,7 +1981,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-12, 0),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-fluid-background-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-fluid-background-front.png",
                             line_length = 1,
                             width = 82,
                             height = 88,
@@ -1920,7 +2006,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-flow-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-flow-front.png",
                         line_length = 1,
                         width = 66,
                         height = 16,
@@ -1930,7 +2016,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, -18),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-flow-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-flow-front.png",
                             line_length = 1,
                             width = 130,
                             height = 28,
@@ -1948,7 +2034,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-fluid-flow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-fluid-flow.png",
                         line_length = 1,
                         width = 66,
                         height = 44,
@@ -1958,7 +2044,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, -32),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-fluid-flow.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-fluid-flow.png",
                             line_length = 1,
                             width = 130,
                             height = 88,
@@ -1982,7 +2068,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-flow.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-fluid-flow.png",
                         line_length = 1,
                         width = 14,
                         height = 10,
@@ -1992,7 +2078,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(2, 22),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-flow.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-fluid-flow.png",
                             line_length = 1,
                             width = 26,
                             height = 20,
@@ -2009,7 +2095,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-fluid-flow-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-fluid-flow-front.png",
                         line_length = 1,
                         width = 40,
                         height = 44,
@@ -2019,7 +2105,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(12, 0),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-fluid-flow-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-fluid-flow-front.png",
                             line_length = 1,
                             width = 84,
                             height = 86,
@@ -2037,7 +2123,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-fluid-flow-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-fluid-flow-front.png",
                         line_length = 1,
                         width = 42,
                         height = 44,
@@ -2047,7 +2133,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-12, 0),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-fluid-flow-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-fluid-flow-front.png",
                             line_length = 1,
                             width = 82,
                             height = 86,
@@ -2069,7 +2155,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-wet-front.png",
                         line_length = 1,
                         width = 82,
                         height = 62,
@@ -2079,7 +2165,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, 20),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-wet-front.png",
                             line_length = 1,
                             width = 162,
                             height = 124,
@@ -2096,7 +2182,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-wet-front.png",
                         line_length = 1,
                         width = 106,
                         height = 94,
@@ -2106,7 +2192,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-4, 2),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-wet-front.png",
                             line_length = 1,
                             width = 210,
                             height = 190,
@@ -2123,7 +2209,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-output.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-output.png",
                         line_length = 5,
                         width = 42,
                         height = 28,
@@ -2132,7 +2218,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, 34),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-output.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-output.png",
                             line_length = 5,
                             width = 82,
                             height = 56,
@@ -2144,7 +2230,7 @@ mining_drill.wet_mining_graphics_set =
                     },
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-wet-front.png",
                         line_length = 1,
                         width = 96,
                         height = 38,
@@ -2154,7 +2240,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(0, 18),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-wet-front.png",
                             line_length = 1,
                             width = 192,
                             height = 70,
@@ -2171,7 +2257,7 @@ mining_drill.wet_mining_graphics_set =
                 layers = {
                     {
                         priority = "high",
-                        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-front.png",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-wet-front.png",
                         line_length = 1,
                         width = 106,
                         height = 94,
@@ -2181,7 +2267,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(2, 2),
                         hr_version = {
                             priority = "high",
-                            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-front.png",
+                            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-wet-front.png",
                             line_length = 1,
                             width = 208,
                             height = 186,
@@ -2219,7 +2305,7 @@ mining_drill.circuit_wire_connection_points = circuit_connectors.points
 mining_drill.circuit_connector_sprites = circuit_connectors.sprites
 
 mining_drill.radius_visualisation_picture = {
-    filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
+    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
     width = 10,
     height = 10
 }
@@ -2227,7 +2313,7 @@ mining_drill.radius_visualisation_picture = {
 mining_drill.integration_patch = {
     north = {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-N-integration.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-integration.png",
         line_length = 1,
         width = 116,
         height = 118,
@@ -2238,7 +2324,7 @@ mining_drill.integration_patch = {
         repeat_count = 5,
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-integration.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-N-integration.png",
             line_length = 1,
             width = 230,
             height = 236,
@@ -2252,7 +2338,7 @@ mining_drill.integration_patch = {
     },
     east = {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-E-integration.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-E-integration.png",
         line_length = 1,
         width = 120,
         height = 104,
@@ -2263,7 +2349,7 @@ mining_drill.integration_patch = {
         repeat_count = 5,
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-integration.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-E-integration.png",
             line_length = 1,
             width = 238,
             height = 204,
@@ -2277,7 +2363,7 @@ mining_drill.integration_patch = {
     },
     south = {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-S-integration.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-S-integration.png",
         line_length = 1,
         width = 112,
         height = 114,
@@ -2288,7 +2374,7 @@ mining_drill.integration_patch = {
         repeat_count = 5,
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-integration.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-S-integration.png",
             line_length = 1,
             width = 224,
             height = 228,
@@ -2302,7 +2388,7 @@ mining_drill.integration_patch = {
     },
     west = {
         priority = "high",
-        filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-W-integration.png",
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-W-integration.png",
         line_length = 1,
         width = 116,
         height = 104,
@@ -2313,7 +2399,7 @@ mining_drill.integration_patch = {
         repeat_count = 5,
         hr_version = {
             priority = "high",
-            filename = "__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-integration.png",
+            filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-W-integration.png",
             line_length = 1,
             width = 234,
             height = 202,

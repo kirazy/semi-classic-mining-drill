@@ -8,6 +8,7 @@
   "description": "Replaces the new mining drill from 0.18.44 with the previous new mining drill from versions 0.18.31 to 0.18.43.",
   "dependencies": 
   [	
-    "base >= 0.18.44"
+    "base >= 0.18.44",
+    "! classic-mining-drill"
   ]
 }

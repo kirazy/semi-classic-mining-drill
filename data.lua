@@ -1,5 +1,5 @@
 -- Copyright (c) 2020 Kirazy
--- Part of Classic Mining Drill
+-- Part of Semi-Classic Mining Drill
 --     
 -- See LICENSE.md in the project directory for license information.
 
