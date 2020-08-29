@@ -1,10 +1,10 @@
 -- Copyright (c) 2020 Kirazy
 -- Part of Semi-Classic Mining Drill
---     
+--
 -- See LICENSE.md in the project directory for license information.
 
 ----------------------------------------------------------------------------------------------------
--- Mining Drill Constants and Functions
+-- Mining Drill Global Constants and Functions
 ----------------------------------------------------------------------------------------------------
 electric_drill_animation_speed = 0.4
 electric_drill_animation_sequence = {
@@ -373,44 +373,42 @@ local circuit_connectors = circuit_connector_definitions.create(universal_connec
 ----------------------------------------------------------------------------------------------------
 
 -- Item
-mining_drill_item = data.raw["item"]["electric-mining-drill"]
+local mining_drill_item = data.raw["item"]["electric-mining-drill"]
 mining_drill_item.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill_item.icon_size = 64
 mining_drill_item.icon_mipmaps = 4
 
 -- Remnants
-mining_drill_remnants = data.raw["corpse"]["electric-mining-drill-remnants"]
+local mining_drill_remnants = data.raw["corpse"]["electric-mining-drill-remnants"]
 mining_drill_remnants.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill_remnants.icon_size = 64
 mining_drill_remnants.icon_mipmaps = 4
-mining_drill_remnants.animation = make_rotated_animation_variations_from_sheet (4,
-{
-  filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/remnants/electric-mining-drill-remnants.png",
-  line_length = 1,
-  width = 178,
-  height = 166,
-  frame_count = 1,
-  variation_count = 1,
-  axially_symmetrical = false,
-  direction_count = 1,
-  shift = util.by_pixel(7, 0),
-  hr_version =
-  {
-    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/remnants/hr-electric-mining-drill-remnants.png",
+mining_drill_remnants.animation = make_rotated_animation_variations_from_sheet (4, {
+    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/remnants/electric-mining-drill-remnants.png",
     line_length = 1,
-    width = 356,
-    height = 328,
+    width = 178,
+    height = 166,
     frame_count = 1,
     variation_count = 1,
     axially_symmetrical = false,
     direction_count = 1,
-    shift = util.by_pixel(7, -0.5),
-    scale = 0.5,
-  },
+    shift = util.by_pixel(7, 0),
+    hr_version = {
+        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/remnants/hr-electric-mining-drill-remnants.png",
+        line_length = 1,
+        width = 356,
+        height = 328,
+        frame_count = 1,
+        variation_count = 1,
+        axially_symmetrical = false,
+        direction_count = 1,
+        shift = util.by_pixel(7, -0.5),
+        scale = 0.5,
+    },
 })
 
 -- Explosion
-mining_drill_explosion = data.raw["explosion"]["electric-mining-drill-explosion"]
+local mining_drill_explosion = data.raw["explosion"]["electric-mining-drill-explosion"]
 mining_drill_explosion.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill_explosion.icon_size = 64
 mining_drill_explosion.icon_mipmaps = 4
@@ -571,12 +569,12 @@ mining_drill_explosion.created_effect = {
 }
 
 -- Entity
-mining_drill = data.raw["mining-drill"]["electric-mining-drill"]
+local mining_drill = data.raw["mining-drill"]["electric-mining-drill"]
 mining_drill.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill.icon_size = 64
 mining_drill.icon_mipmaps = 4
 
-mining_drill.graphics_set = 
+mining_drill.graphics_set =
 {
     drilling_vertical_movement_duration = 10 / electric_drill_animation_speed,
     animation_progress = 1,
@@ -1193,7 +1191,7 @@ mining_drill.graphics_set =
     }
 }
 
-mining_drill.wet_mining_graphics_set = 
+mining_drill.wet_mining_graphics_set =
 {
     drilling_vertical_movement_duration = 10 / electric_drill_animation_speed,
     animation_progress = 1,
