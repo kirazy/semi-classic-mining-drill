@@ -5,7 +5,7 @@
   "title": "Semi-Classic Mining Drill",
   "author": "Kirazy",
   "contact": "kirazy@live.com",
-  "description": "Replaces the current mining drill with the first reworked version of the mining drill.",
+  "description": "Replaces the current vanilla mining drill with the first reworked version of the mining drill.",
   "dependencies":
   [
     "base >= 1.0.0",
