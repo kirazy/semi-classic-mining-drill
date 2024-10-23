@@ -247,16 +247,12 @@ local electric_mining_drill_secondary_light = electric_mining_drill_add_light_of
     light = { intensity = 0.8, size = 1.5, color={r=1, g=1, b=1}, minimum_darkness = 0.1 }
 })
 
-local circuit_connectors = circuit_connector_definitions.create(universal_connector_template, {
+local circuit_connectors = circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 4, main_offset = util.by_pixel(-42, -62), shadow_offset = util.by_pixel(0, -34), show_shadow = false },
     { variation = 2, main_offset = util.by_pixel(36, -1), shadow_offset = util.by_pixel(70, 35), show_shadow = false },
     { variation = 0, main_offset = util.by_pixel(-31, 4), shadow_offset = util.by_pixel(0, 34), show_shadow = false },
     { variation = 6, main_offset = util.by_pixel(-32, 5), shadow_offset = util.by_pixel(0, 35), show_shadow = false }
 })
-
-----------------------------------------------------------------------------------------------------
--- Restore the mining drill
-----------------------------------------------------------------------------------------------------
 
 -- Item
 local mining_drill_item = data.raw["item"]["electric-mining-drill"]
@@ -1532,8 +1528,7 @@ mining_drill.wet_mining_graphics_set =
     }
 }
 
-mining_drill.circuit_wire_connection_points = circuit_connectors.points
-mining_drill.circuit_connector_sprites = circuit_connectors.sprites
+mining_drill.circuit_connector = circuit_connectors
 
 mining_drill.radius_visualisation_picture = {
     filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
