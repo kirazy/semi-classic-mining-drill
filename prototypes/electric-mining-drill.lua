@@ -23,7 +23,7 @@ local electric_drill_animation_sequence = {
     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-    21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1
+    21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1,
 }
 
 local electric_drill_animation_shadow_sequence = {
@@ -43,7 +43,7 @@ local electric_drill_animation_shadow_sequence = {
     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
-    21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1
+    21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1,
 }
 
 --- Gets the mining drill smoke animation.
@@ -225,7 +225,7 @@ end
 --- @return data.WorkingVisualisation
 local function electric_mining_drill_status_leds_working_visualisation()
     local led_blend_mode = nil -- "additive"
-    local led_tint = {1,1,1,0.5}
+    local led_tint = { 1, 1, 1, 0.5 }
 
     --- @type data.WorkingVisualisation
     local working_visualisation = {
@@ -267,7 +267,7 @@ local function electric_mining_drill_status_leds_working_visualisation()
             tint = led_tint,
             shift = util.by_pixel(-42, -45),
             scale = 0.5,
-        }
+        },
     }
 
     return working_visualisation
@@ -277,30 +277,30 @@ end
 --- light.
 --- @param working_visualisation data.WorkingVisualisation -@return data.WorkingVisualisation
 local function electric_mining_drill_add_light_offsets(working_visualisation)
-    working_visualisation.north_position = { 1.0 - 11/64, -2.0 - 10/64}
-    working_visualisation.east_position =  { 1.5 - 13/64, -1.5 +  8/64}
-    working_visualisation.south_position = { 1.0 - 10/64,  0.5 - 12/64}
-    working_visualisation.west_position =  {-1.5 + 13/64, -1.5 +  7/64}
+    working_visualisation.north_position = {  1.0 - 11 / 64, -2.0 - 10 / 64 }
+    working_visualisation.east_position =  {  1.5 - 13 / 64, -1.5 +  8 / 64 }
+    working_visualisation.south_position = {  1.0 - 10 / 64,  0.5 - 12 / 64 }
+    working_visualisation.west_position =  { -1.5 + 13 / 64, -1.5 +  7 / 64 }
 
     return working_visualisation
 end
 
 local electric_mining_drill_primary_light = electric_mining_drill_add_light_offsets({
-    light = { intensity = 1, size = 3, color={r=1, g=1, b=1}, minimum_darkness = 0.1 }
+    light = { intensity = 1, size = 3, color = { r = 1, g = 1, b = 1 }, minimum_darkness = 0.1 },
 })
 
 local electric_mining_drill_secondary_light = electric_mining_drill_add_light_offsets({
     always_draw = true,
     apply_tint = "status",
-    light = { intensity = 0.8, size = 1.5, color={r=1, g=1, b=1}, minimum_darkness = 0.1 }
+    light = { intensity = 0.8, size = 1.5, color = { r = 1, g = 1, b = 1 }, minimum_darkness = 0.1 },
 })
 
 --- @type data.CircuitConnectorDefinition[]
 local circuit_connectors = circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 4, main_offset = util.by_pixel(-42, -62), shadow_offset = util.by_pixel(0, -34), show_shadow = false },
-    { variation = 2, main_offset = util.by_pixel(36, -1), shadow_offset = util.by_pixel(70, 35), show_shadow = false },
-    { variation = 0, main_offset = util.by_pixel(-31, 4), shadow_offset = util.by_pixel(0, 34), show_shadow = false },
-    { variation = 6, main_offset = util.by_pixel(-32, 5), shadow_offset = util.by_pixel(0, 35), show_shadow = false }
+    { variation = 2, main_offset = util.by_pixel(36, -1),   shadow_offset = util.by_pixel(70, 35), show_shadow = false },
+    { variation = 0, main_offset = util.by_pixel(-31, 4),   shadow_offset = util.by_pixel(0, 34),  show_shadow = false },
+    { variation = 6, main_offset = util.by_pixel(-32, 5),   shadow_offset = util.by_pixel(0, 35),  show_shadow = false },
 })
 
 -- Item
@@ -312,7 +312,7 @@ mining_drill_item.icon_size = 64
 local mining_drill_remnants = data.raw["corpse"]["electric-mining-drill-remnants"]
 mining_drill_remnants.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill_remnants.icon_size = 64
-mining_drill_remnants.animation = make_rotated_animation_variations_from_sheet (4, {
+mining_drill_remnants.animation = make_rotated_animation_variations_from_sheet(4, {
     filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/remnants/electric-mining-drill-remnants.png",
     line_length = 1,
     width = 356,
@@ -339,7 +339,7 @@ mining_drill_explosion.animations = {
         height = 178,
         frame_count = 24,
         animation_speed = 0.5,
-        shift = util.by_pixel(-1,-24),
+        shift = util.by_pixel(-1, -24),
         scale = 0.5,
     },
     {
@@ -350,7 +350,7 @@ mining_drill_explosion.animations = {
         height = 152,
         frame_count = 24,
         animation_speed = 0.5,
-        shift = util.by_pixel(2,-7.5),
+        shift = util.by_pixel(2, -7.5),
         scale = 0.5,
     },
 }
@@ -358,7 +358,7 @@ mining_drill_explosion.animations = {
 mining_drill_explosion.light = {
     intensity = 1,
     size = 20,
-    color = {r = 1.0, g = 1.0, b = 1.0}
+    color = { r = 1.0, g = 1.0, b = 1.0 },
 }
 
 mining_drill_explosion.smoke = "smoke-fast"
@@ -367,31 +367,31 @@ mining_drill_explosion.smoke_slow_down_factor = 1
 mining_drill_explosion.sound = {
     aggregation = {
         max_count = 1,
-        remove = true
+        remove = true,
     },
     audible_distance_modifier = 0.7,
     variations = {
         {
             filename = "__base__/sound/fight/medium-explosion-1.ogg",
-            volume = 0.4
+            volume = 0.4,
         },
         {
             filename = "__base__/sound/fight/medium-explosion-2.ogg",
-            volume = 0.4
+            volume = 0.4,
         },
         {
             filename = "__base__/sound/fight/medium-explosion-3.ogg",
-            volume = 0.4
+            volume = 0.4,
         },
         {
             filename = "__base__/sound/fight/medium-explosion-4.ogg",
-            volume = 0.4
+            volume = 0.4,
         },
         {
             filename = "__base__/sound/fight/medium-explosion-5.ogg",
-            volume = 0.4
-        }
-    }
+            volume = 0.4,
+        },
+    },
 }
 
 mining_drill_explosion.created_effect = {
@@ -409,7 +409,7 @@ mining_drill_explosion.created_effect = {
                 initial_vertical_speed = 0.074,
                 initial_vertical_speed_deviation = 0.05,
                 speed_from_center = 0.03,
-                speed_from_center_deviation = 0.05
+                speed_from_center_deviation = 0.05,
             },
             {
                 type = "create-particle",
@@ -421,7 +421,7 @@ mining_drill_explosion.created_effect = {
                 initial_vertical_speed = 0.091,
                 initial_vertical_speed_deviation = 0.05,
                 speed_from_center = 0.03,
-                speed_from_center_deviation = 0.05
+                speed_from_center_deviation = 0.05,
             },
             {
                 type = "create-particle",
@@ -433,7 +433,7 @@ mining_drill_explosion.created_effect = {
                 initial_vertical_speed = 0.066,
                 initial_vertical_speed_deviation = 0.05,
                 speed_from_center = 0.03,
-                speed_from_center_deviation = 0.05
+                speed_from_center_deviation = 0.05,
             },
             {
                 type = "create-particle",
@@ -445,7 +445,7 @@ mining_drill_explosion.created_effect = {
                 initial_vertical_speed = 0.092,
                 initial_vertical_speed_deviation = 0.05,
                 speed_from_center = 0.05,
-                speed_from_center_deviation = 0.05
+                speed_from_center_deviation = 0.05,
             },
             {
                 type = "create-particle",
@@ -457,10 +457,10 @@ mining_drill_explosion.created_effect = {
                 initial_vertical_speed = 0.061,
                 initial_vertical_speed_deviation = 0.05,
                 speed_from_center = 0.03,
-                speed_from_center_deviation = 0.05
+                speed_from_center_deviation = 0.05,
             },
         },
-    }
+    },
 }
 
 -- Entity
@@ -481,7 +481,7 @@ mining_drill.graphics_set =
     circuit_connector_secondary_draw_order = { north = 14, east = 26, south = 26, west = 26 },
 
     animation = {
-        north =  {
+        north = {
             layers = {
                 {
                     priority = "high",
@@ -520,8 +520,8 @@ mining_drill.graphics_set =
                     shift = util.by_pixel(19, -3),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
         east = {
             layers = {
@@ -562,8 +562,8 @@ mining_drill.graphics_set =
                     shift = util.by_pixel(20, 6),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
         south = {
             layers = {
@@ -592,8 +592,8 @@ mining_drill.graphics_set =
                     shift = util.by_pixel(19, 2),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
         west = {
             layers = {
@@ -634,21 +634,21 @@ mining_drill.graphics_set =
                     shift = util.by_pixel(15, 6),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
     },
 
     shift_animation_waypoints = {
-            -- Movement should be between 0.3-0.5 distance
-            -- Bounds -0.7 - 0.6
-            north = { {0, 0}, {0, 0.4}, {0, 0.1}, {0, -0.25}, {0, -0.5}, {0, -0.2}, {0, 0}, {0, -0.4}, {0, -0.1}, {0, 0.2}, {0, 0.6}, {0, 0.3}, {0, -0.1}, {0, -0.4}, {0, 0}, {0, 0.3} },
-            -- Bounds -0.6 - 0.4
-            east = { {0, 0}, {0.4, 0}, {0.1, 0}, {-0.3, 0}, {-0.6, 0}, {-0.2, 0}, {0.1, 0}, {-0.3, 0}, {0, 0}, {-0.35, 0}, {-0.6, 0}, {-0.2, 0}, {0.1, 0}, {-0.3, 0} },
-            -- Bounds -0.7 - 0.5
-            south = { {0, 0}, {0, -0.4}, {0, -0.1}, {0, 0.2}, {0, 0.5}, {0, 0.3}, {0, 0}, {0, 0.4}, {0, 0.1}, {0, -0.2}, {0, -0.6}, {0, -0.3}, {0, 0.1}, {0, 0.4}, {0, 0}, {0, -0.3} },
-            -- Bounds -0.4 - 0.6
-            west = { {0, 0}, {-0.4, 0}, {-0.1, 0}, {0.3, 0}, {0.6, 0}, {0.2, 0}, {-0.1, 0}, {0.3, 0}, {0, 0}, {0.35, 0}, {0.6, 0}, {0.2, 0}, {-0.1, 0}, {0.3, 0} },
+        -- Movement should be between 0.3-0.5 distance
+        -- Bounds -0.7 - 0.6
+        north = { { 0, 0 }, { 0, 0.4 }, { 0, 0.1 }, { 0, -0.25 }, { 0, -0.5 }, { 0, -0.2 }, { 0, 0 }, { 0, -0.4 }, { 0, -0.1 }, { 0, 0.2 }, { 0, 0.6 }, { 0, 0.3 }, { 0, -0.1 }, { 0, -0.4 }, { 0, 0 }, { 0, 0.3 } },
+        -- Bounds -0.6 - 0.4
+        east = { { 0, 0 }, { 0.4, 0 }, { 0.1, 0 }, { -0.3, 0 }, { -0.6, 0 }, { -0.2, 0 }, { 0.1, 0 }, { -0.3, 0 }, { 0, 0 }, { -0.35, 0 }, { -0.6, 0 }, { -0.2, 0 }, { 0.1, 0 }, { -0.3, 0 } },
+        -- Bounds -0.7 - 0.5
+        south = { { 0, 0 }, { 0, -0.4 }, { 0, -0.1 }, { 0, 0.2 }, { 0, 0.5 }, { 0, 0.3 }, { 0, 0 }, { 0, 0.4 }, { 0, 0.1 }, { 0, -0.2 }, { 0, -0.6 }, { 0, -0.3 }, { 0, 0.1 }, { 0, 0.4 }, { 0, 0 }, { 0, -0.3 } },
+        -- Bounds -0.4 - 0.6
+        west = { { 0, 0 }, { -0.4, 0 }, { -0.1, 0 }, { 0.3, 0 }, { 0.6, 0 }, { 0.2, 0 }, { -0.1, 0 }, { 0.3, 0 }, { 0, 0 }, { 0.35, 0 }, { 0.6, 0 }, { 0.2, 0 }, { -0.1, 0 }, { 0.3, 0 } },
     },
 
     shift_animation_waypoint_stop_duration = 195 / electric_drill_animation_speed,
@@ -686,8 +686,8 @@ mining_drill.graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(1, -44),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             east_animation = nil,
             south_animation = nil,
@@ -701,26 +701,26 @@ mining_drill.graphics_set =
             north_animation = {
                 layers = {
                     electric_mining_drill_animation(),
-                    electric_mining_drill_shadow_animation()
-                }
+                    electric_mining_drill_shadow_animation(),
+                },
             },
             east_animation = {
                 layers = {
                     electric_mining_drill_horizontal_animation(),
-                    electric_mining_drill_horizontal_shadow_animation()
-                }
+                    electric_mining_drill_horizontal_shadow_animation(),
+                },
             },
             south_animation = {
                 layers = {
                     electric_mining_drill_animation(),
-                    electric_mining_drill_shadow_animation()
-                }
+                    electric_mining_drill_shadow_animation(),
+                },
             },
             west_animation = {
                 layers = {
                     electric_mining_drill_horizontal_animation(),
-                    electric_mining_drill_horizontal_shadow_animation()
-                }
+                    electric_mining_drill_horizontal_shadow_animation(),
+                },
             },
         },
 
@@ -756,8 +756,8 @@ mining_drill.graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(25, -12),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             south_animation = {
                 layers = {
@@ -772,8 +772,8 @@ mining_drill.graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(-2, 20),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             west_animation = {
                 layers = {
@@ -788,9 +788,9 @@ mining_drill.graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(-25, -11),
                         scale = 0.5,
-                    }
-                }
-            }
+                    },
+                },
+            },
         },
 
         -- front frame
@@ -834,7 +834,7 @@ mining_drill.graphics_set =
                         shift = util.by_pixel(0, 13),
                         scale = 0.5,
                     },
-                }
+                },
             },
             west_animation = {
                 priority = "high",
@@ -847,7 +847,7 @@ mining_drill.graphics_set =
                 direction_count = 1,
                 shift = util.by_pixel(-4, 1),
                 scale = 0.5,
-            }
+            },
         },
 
         -- drill front animation
@@ -865,8 +865,8 @@ mining_drill.graphics_set =
 
         -- light
         electric_mining_drill_primary_light,
-        electric_mining_drill_secondary_light
-    }
+        electric_mining_drill_secondary_light,
+    },
 }
 
 mining_drill.wet_mining_graphics_set =
@@ -921,8 +921,8 @@ mining_drill.wet_mining_graphics_set =
                     shift = util.by_pixel(19, 1),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
         west = {
             layers = {
@@ -963,8 +963,8 @@ mining_drill.wet_mining_graphics_set =
                     shift = util.by_pixel(15, 8),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
         south = {
             layers = {
@@ -993,8 +993,8 @@ mining_drill.wet_mining_graphics_set =
                     shift = util.by_pixel(19, 2),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
         east = {
             layers = {
@@ -1035,21 +1035,21 @@ mining_drill.wet_mining_graphics_set =
                     shift = util.by_pixel(20, 8),
                     repeat_count = 5,
                     scale = 0.5,
-                }
-            }
+                },
+            },
         },
     },
 
     shift_animation_waypoints = {
         -- Movement should be between 0.3-0.5 distance
         -- Bounds -0.5 - 0.6
-        north = { {0, 0}, {0, 0.4}, {0, 0.1}, {0, -0.25}, {0, -0.5}, {0, -0.2}, {0, 0}, {0, -0.4}, {0, -0.1}, {0, 0.2}, {0, 0.6}, {0, 0.3}, {0, -0.1}, {0, -0.4}, {0, 0}, {0, 0.3} },
+        north = { { 0, 0 }, { 0, 0.4 }, { 0, 0.1 }, { 0, -0.25 }, { 0, -0.5 }, { 0, -0.2 }, { 0, 0 }, { 0, -0.4 }, { 0, -0.1 }, { 0, 0.2 }, { 0, 0.6 }, { 0, 0.3 }, { 0, -0.1 }, { 0, -0.4 }, { 0, 0 }, { 0, 0.3 } },
         -- Bounds -0.4 - 0.4
-        east = { {0, 0}, {0.4, 0}, {0, 0}, {-0.25, 0}, {-0.4, 0}, {-0.2, 0}, {0.1, 0}, {-0.3, 0}, {0, 0}, {-0.35, 0}, {-0.1, 0}, {-0.2, 0}, {0.1, 0}, {-0.3, 0} },
+        east = { { 0, 0 }, { 0.4, 0 }, { 0, 0 }, { -0.25, 0 }, { -0.4, 0 }, { -0.2, 0 }, { 0.1, 0 }, { -0.3, 0 }, { 0, 0 }, { -0.35, 0 }, { -0.1, 0 }, { -0.2, 0 }, { 0.1, 0 }, { -0.3, 0 } },
         -- Bounds -0.7 - 0.5
-        south = { {0, 0}, {0, -0.4}, {0, -0.1}, {0, 0.2}, {0, 0.5}, {0, 0.3}, {0, 0}, {0, 0.4}, {0, 0.1}, {0, -0.2}, {0, -0.6}, {0, -0.3}, {0, 0.1}, {0, 0.4}, {0, 0}, {0, -0.3} },
+        south = { { 0, 0 }, { 0, -0.4 }, { 0, -0.1 }, { 0, 0.2 }, { 0, 0.5 }, { 0, 0.3 }, { 0, 0 }, { 0, 0.4 }, { 0, 0.1 }, { 0, -0.2 }, { 0, -0.6 }, { 0, -0.3 }, { 0, 0.1 }, { 0, 0.4 }, { 0, 0 }, { 0, -0.3 } },
         -- Bounds -0.4 - 0.4
-        west = { {0, 0}, {-0.4, 0}, {-0, 0}, {0.25, 0}, {0.4, 0}, {0.2, 0}, {-0.1, 0}, {0.3, 0}, {0, 0}, {0.35, 0}, {0.1, 0}, {0.2, 0}, {-0.1, 0}, {0.3, 0} },
+        west = { { 0, 0 }, { -0.4, 0 }, { -0, 0 }, { 0.25, 0 }, { 0.4, 0 }, { 0.2, 0 }, { -0.1, 0 }, { 0.3, 0 }, { 0, 0 }, { 0.35, 0 }, { 0.1, 0 }, { 0.2, 0 }, { -0.1, 0 }, { 0.3, 0 } },
     },
 
     shift_animation_waypoint_stop_duration = 195 / electric_drill_animation_speed,
@@ -1071,28 +1071,28 @@ mining_drill.wet_mining_graphics_set =
 
         -- dust animation directional 1
         {
-        constant_speed = true,
-        fadeout = true,
-        apply_tint = "resource-color",
-        north_animation = {
-            layers = {
-                {
-                    priority = "high",
-                    filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-smoke.png",
-                    line_length = 5,
-                    width = 46,
-                    height = 58,
-                    frame_count = 10,
-                    animation_speed = electric_drill_animation_speed,
-                    direction_count = 1,
-                    shift = util.by_pixel(1, -44),
-                    scale = 0.5,
-                }
-            }
-        },
-        east_animation = nil,
-        south_animation = nil,
-        west_animation = nil
+            constant_speed = true,
+            fadeout = true,
+            apply_tint = "resource-color",
+            north_animation = {
+                layers = {
+                    {
+                        priority = "high",
+                        filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-N-smoke.png",
+                        line_length = 5,
+                        width = 46,
+                        height = 58,
+                        frame_count = 10,
+                        animation_speed = electric_drill_animation_speed,
+                        direction_count = 1,
+                        shift = util.by_pixel(1, -44),
+                        scale = 0.5,
+                    },
+                },
+            },
+            east_animation = nil,
+            south_animation = nil,
+            west_animation = nil,
         },
 
         -- drill back animation
@@ -1102,26 +1102,26 @@ mining_drill.wet_mining_graphics_set =
             north_animation = {
                 layers = {
                     electric_mining_drill_animation(),
-                    electric_mining_drill_shadow_animation()
-                }
+                    electric_mining_drill_shadow_animation(),
+                },
             },
             east_animation = {
                 layers = {
                     electric_mining_drill_horizontal_animation(),
-                    electric_mining_drill_horizontal_shadow_animation()
-                }
+                    electric_mining_drill_horizontal_shadow_animation(),
+                },
             },
             south_animation = {
                 layers = {
                     electric_mining_drill_animation(),
-                    electric_mining_drill_shadow_animation()
-                }
+                    electric_mining_drill_shadow_animation(),
+                },
             },
             west_animation = {
                 layers = {
                     electric_mining_drill_horizontal_animation(),
-                    electric_mining_drill_horizontal_shadow_animation()
-                }
+                    electric_mining_drill_horizontal_shadow_animation(),
+                },
             },
         },
 
@@ -1153,8 +1153,8 @@ mining_drill.wet_mining_graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(25, -12),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             south_animation = {
                 layers = {
@@ -1169,8 +1169,8 @@ mining_drill.wet_mining_graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(-2, 20),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             west_animation = {
                 layers = {
@@ -1185,9 +1185,9 @@ mining_drill.wet_mining_graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(-25, -11),
                         scale = 0.5,
-                    }
-                }
-            }
+                    },
+                },
+            },
         },
 
         -- fluid window background (bottom)
@@ -1209,7 +1209,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-1, -18),
                         scale = 0.5,
                     },
-                }
+                },
             },
             east_animation = nil,
             south_animation = {
@@ -1226,7 +1226,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-1, -33),
                         scale = 0.5,
                     },
-                }
+                },
             },
             west_animation = nil,
         },
@@ -1248,7 +1248,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(1, 21),
                         scale = 0.5,
                     },
-                }
+                },
             },
             west_animation = {
                 layers = {
@@ -1263,8 +1263,8 @@ mining_drill.wet_mining_graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(11, 0),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             south_animation = nil,
             east_animation = {
@@ -1281,7 +1281,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-12, 0),
                         scale = 0.5,
                     },
-                }
+                },
             },
         },
         -- fluid base (bottom)
@@ -1304,7 +1304,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(0, -17),
                         scale = 0.5,
                     },
-                }
+                },
             },
             east_animation = nil,
             south_animation = {
@@ -1321,9 +1321,9 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(0, -32),
                         scale = 0.5,
                     },
-                }
+                },
             },
-            west_animation = nil
+            west_animation = nil,
         },
 
         -- fluid base (front)
@@ -1344,7 +1344,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(2, 21),
                         scale = 0.5,
                     },
-                }
+                },
             },
             west_animation = {
                 layers = {
@@ -1359,8 +1359,8 @@ mining_drill.wet_mining_graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(12, -1),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             south_animation = nil,
             east_animation = {
@@ -1377,7 +1377,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-12, -1),
                         scale = 0.5,
                     },
-                }
+                },
             },
         },
 
@@ -1401,7 +1401,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, -17),
                         scale = 0.5,
                     },
-                }
+                },
             },
             east_animation = nil,
             south_animation = {
@@ -1418,7 +1418,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, -32),
                         scale = 0.5,
                     },
-                }
+                },
             },
             west_animation = nil,
         },
@@ -1441,7 +1441,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(2, 22),
                         scale = 0.5,
                     },
-                }
+                },
             },
             west_animation = {
                 layers = {
@@ -1456,8 +1456,8 @@ mining_drill.wet_mining_graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(11, 0),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             south_animation = nil,
             east_animation = {
@@ -1474,7 +1474,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-12, 0),
                         scale = 0.5,
                     },
-                }
+                },
             },
         },
 
@@ -1495,7 +1495,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(-2, 20),
                         scale = 0.5,
                     },
-                }
+                },
             },
             west_animation = {
                 layers = {
@@ -1510,8 +1510,8 @@ mining_drill.wet_mining_graphics_set =
                         direction_count = 1,
                         shift = util.by_pixel(-4, 1),
                         scale = 0.5,
-                    }
-                }
+                    },
+                },
             },
             south_animation = {
                 layers = {
@@ -1538,7 +1538,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(0, 19),
                         scale = 0.5,
                     },
-                }
+                },
             },
             east_animation = {
                 layers = {
@@ -1554,7 +1554,7 @@ mining_drill.wet_mining_graphics_set =
                         shift = util.by_pixel(3, 2),
                         scale = 0.5,
                     },
-                }
+                },
             },
         },
 
@@ -1573,8 +1573,8 @@ mining_drill.wet_mining_graphics_set =
 
         -- light
         electric_mining_drill_primary_light,
-        electric_mining_drill_secondary_light
-    }
+        electric_mining_drill_secondary_light,
+    },
 }
 
 mining_drill.circuit_connector = circuit_connectors
@@ -1582,7 +1582,7 @@ mining_drill.circuit_connector = circuit_connectors
 mining_drill.radius_visualisation_picture = {
     filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",
     width = 10,
-    height = 10
+    height = 10,
 }
 
 mining_drill.integration_patch = {
@@ -1637,5 +1637,5 @@ mining_drill.integration_patch = {
         shift = util.by_pixel(-3, 5),
         repeat_count = 5,
         scale = 0.5,
-    }
+    },
 }
