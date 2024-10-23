@@ -9,7 +9,7 @@
   "dependencies":
   [
     "base",
-    "space-age",
+    "? space-age",
     "! classic-mining-drill"
   ]
 }
