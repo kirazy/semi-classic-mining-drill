@@ -1,7 +1,7 @@
 {
   "name": "semi-classic-mining-drill",
-  "version": "1.1.0",
-  "factorio_version": "1.1",
+  "version": "1.2.0",
+  "factorio_version": "2.0",
   "title": "Semi-Classic Mining Drill",
   "author": "Kirazy",
   "contact": "kirazy@live.com",
@@ -9,6 +9,7 @@
   "dependencies":
   [
     "base",
+    "space-age",
     "! classic-mining-drill"
   ]
 }
