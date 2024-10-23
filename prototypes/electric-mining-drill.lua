@@ -3,11 +3,10 @@
 --
 -- See LICENSE.md in the project directory for license information.
 
-----------------------------------------------------------------------------------------------------
--- Mining Drill Global Constants and Functions
-----------------------------------------------------------------------------------------------------
-electric_drill_animation_speed = 0.4
-electric_drill_animation_sequence = {
+-- Mining Drill Constants and Functions
+
+local electric_drill_animation_speed = 0.4
+local electric_drill_animation_sequence = {
     1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
@@ -27,7 +26,7 @@ electric_drill_animation_sequence = {
     21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1
 }
 
-electric_drill_animation_shadow_sequence = {
+local electric_drill_animation_shadow_sequence = {
     1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
     21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
@@ -47,9 +46,11 @@ electric_drill_animation_shadow_sequence = {
     21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 1
 }
 
-function electric_mining_drill_smoke()
-    return
-    {
+--- Gets the mining drill smoke animation.
+--- @return data.Animation
+local function electric_mining_drill_smoke()
+    --- @type data.Animation
+    local animation = {
         priority = "high",
         filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke.png",
         line_length = 6,
@@ -61,11 +62,15 @@ function electric_mining_drill_smoke()
         shift = util.by_pixel(0, 3),
         scale = 0.5,
     }
+
+    return animation
 end
 
-function electric_mining_drill_smoke_front()
-    return
-    {
+--- Gets the mining drill smoke front animation.
+--- @return data.Animation
+local function electric_mining_drill_smoke_front()
+    --- @type data.Animation
+    local animation = {
         priority = "high",
         filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-smoke-front.png",
         line_length = 6,
@@ -77,11 +82,15 @@ function electric_mining_drill_smoke_front()
         shift = util.by_pixel(-3, 9),
         scale = 0.5,
     }
+
+    return animation
 end
 
-function electric_mining_drill_animation()
-    return
-    {
+--- Gets the electric mining drill animation.
+--- @return data.Animation
+local function electric_mining_drill_animation()
+    --- @type data.Animation
+    local animation = {
         priority = "high",
         filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill.png",
         line_length = 6,
@@ -94,11 +103,15 @@ function electric_mining_drill_animation()
         shift = util.by_pixel(0, -21),
         scale = 0.5,
     }
+
+    return animation
 end
 
-function electric_mining_drill_shadow_animation()
-    return
-    {
+--- Gets the electric mining drill shadow animation.
+--- @return data.Animation
+local function electric_mining_drill_shadow_animation()
+    --- @type data.Animation
+    local animation = {
         priority = "high",
         filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-shadow.png",
         line_length = 7,
@@ -111,11 +124,15 @@ function electric_mining_drill_shadow_animation()
         shift = util.by_pixel(49, 7),
         scale = 0.5,
     }
+
+    return animation
 end
 
-function electric_mining_drill_horizontal_animation()
-    return
-    {
+--- Gets the electric mining drill horizontal animation.
+--- @return data.Animation
+local function electric_mining_drill_horizontal_animation()
+    --- @type data.Animation
+    local animation = {
         priority = "high",
         filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal.png",
         line_length = 6,
@@ -128,11 +145,15 @@ function electric_mining_drill_horizontal_animation()
         shift = util.by_pixel(-3, -27),
         scale = 0.5,
     }
+
+    return animation
 end
 
-function electric_mining_drill_horizontal_front_animation()
-    return
-    {
+--- Gets the electric mining drill front animation.
+--- @return data.Animation
+local function electric_mining_drill_horizontal_front_animation()
+    --- @type data.Animation
+    local animation = {
         priority = "high",
         filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-front.png",
         line_length = 6,
@@ -145,11 +166,15 @@ function electric_mining_drill_horizontal_front_animation()
         shift = util.by_pixel(14, -23),
         scale = 0.5,
     }
+
+    return animation
 end
 
-function electric_mining_drill_horizontal_shadow_animation()
-    return
-    {
+--- Gets the electric mining drill shadow animation.
+--- @return data.Animation
+local function electric_mining_drill_horizontal_shadow_animation()
+    --- @type data.Animation
+    local animation = {
         priority = "high",
         filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/electric-mining-drill-horizontal-shadow.png",
         line_length = 7,
@@ -162,31 +187,48 @@ function electric_mining_drill_horizontal_shadow_animation()
         shift = util.by_pixel(48, 5),
         scale = 0.5,
     }
+
+    return animation
 end
 
-function electric_mining_drill_status_colors()
-    return
-    {
-        -- If no_power, idle, no_minable_resources, disabled, insufficient_input or full_output is used, always_draw of corresponding layer must be set to true to draw it in those states.
+--- Gets the status colors for the LED status indicator lights.
+--- @return data.StatusColors
+local function electric_mining_drill_status_colors()
+    --- @type data.StatusColors
+    local status_colors = {
+        -- If no_power, idle, no_minable_resources, disabled, insufficient_input or full_output is
+        -- used, always_draw of corresponding layer must be set to true to draw it in those states.
 
-        no_power = { 0, 0, 0, 0 },                  -- If no_power is not specified or is nil, it defaults to clear color {0,0,0,0}
+        -- If no_power is not specified or is nil, it defaults to clear color {0,0,0,0}
+        no_power = { 0, 0, 0, 0 },
 
-        idle = { 1, 0, 0, 1 },                      -- If idle is not specified or is nil, it defaults to white.
-        no_minable_resources = { 1, 0, 0, 1 },      -- If no_minable_resources, disabled, insufficient_input or full_output are not specified or are nil, they default to idle color.
+        -- If idle is not specified or is nil, it defaults to white.
+        idle = { 1, 0, 0, 1 },
+
+        -- If no_minable_resources, disabled, insufficient_input or full_output are not specified or
+        -- are nil, they default to idle color.
+        no_minable_resources = { 1, 0, 0, 1 },
         insufficient_input = { 1, 1, 0, 1 },
         full_output = { 1, 1, 0, 1 },
         disabled = { 1, 1, 0, 1 },
 
-        working = { 0, 1, 0, 1 },                   -- If working is not specified or is nil, it defaults to white.
-        low_power = { 1, 1, 0, 1 },                 -- If low_power is not specified or is nil, it defaults to working color.
+        -- If working is not specified or is nil, it defaults to white.
+        working = { 0, 1, 0, 1 },
+        -- If low_power is not specified or is nil, it defaults to working color.
+        low_power = { 1, 1, 0, 1 },
     }
+
+    return status_colors
 end
 
-function electric_mining_drill_status_leds_working_visualisation()
+--- Gets the working visualisation for the LED status lights.
+--- @return data.WorkingVisualisation
+local function electric_mining_drill_status_leds_working_visualisation()
     local led_blend_mode = nil -- "additive"
     local led_tint = {1,1,1,0.5}
-    return
-    {
+
+    --- @type data.WorkingVisualisation
+    local working_visualisation = {
         apply_tint = "status",
         always_draw = true,
         draw_as_sprite = true,
@@ -227,14 +269,20 @@ function electric_mining_drill_status_leds_working_visualisation()
             scale = 0.5,
         }
     }
+
+    return working_visualisation
 end
 
-function electric_mining_drill_add_light_offsets(t)
-    t.north_position = { 1.0 - 11/64, -2.0 - 10/64}
-    t.east_position =  { 1.5 - 13/64, -1.5 +  8/64}
-    t.south_position = { 1.0 - 10/64,  0.5 - 12/64}
-    t.west_position =  {-1.5 + 13/64, -1.5 +  7/64}
-    return t
+--- Adds the cardinal direction offsets to the given `working_visualisation` representing the status
+--- light.
+--- @param working_visualisation data.WorkingVisualisation -@return data.WorkingVisualisation
+local function electric_mining_drill_add_light_offsets(working_visualisation)
+    working_visualisation.north_position = { 1.0 - 11/64, -2.0 - 10/64}
+    working_visualisation.east_position =  { 1.5 - 13/64, -1.5 +  8/64}
+    working_visualisation.south_position = { 1.0 - 10/64,  0.5 - 12/64}
+    working_visualisation.west_position =  {-1.5 + 13/64, -1.5 +  7/64}
+
+    return working_visualisation
 end
 
 local electric_mining_drill_primary_light = electric_mining_drill_add_light_offsets({
@@ -247,6 +295,7 @@ local electric_mining_drill_secondary_light = electric_mining_drill_add_light_of
     light = { intensity = 0.8, size = 1.5, color={r=1, g=1, b=1}, minimum_darkness = 0.1 }
 })
 
+--- @type data.CircuitConnectorDefinition[]
 local circuit_connectors = circuit_connector_definitions.create_vector(universal_connector_template, {
     { variation = 4, main_offset = util.by_pixel(-42, -62), shadow_offset = util.by_pixel(0, -34), show_shadow = false },
     { variation = 2, main_offset = util.by_pixel(36, -1), shadow_offset = util.by_pixel(70, 35), show_shadow = false },
