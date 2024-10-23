@@ -262,13 +262,11 @@ local circuit_connectors = circuit_connector_definitions.create(universal_connec
 local mining_drill_item = data.raw["item"]["electric-mining-drill"]
 mining_drill_item.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill_item.icon_size = 64
-mining_drill_item.icon_mipmaps = 4
 
 -- Remnants
 local mining_drill_remnants = data.raw["corpse"]["electric-mining-drill-remnants"]
 mining_drill_remnants.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill_remnants.icon_size = 64
-mining_drill_remnants.icon_mipmaps = 4
 mining_drill_remnants.animation = make_rotated_animation_variations_from_sheet (4, {
     filename = "__semi-classic-mining-drill__/graphics/entity/electric-mining-drill/remnants/electric-mining-drill-remnants.png",
     line_length = 1,
@@ -286,7 +284,6 @@ mining_drill_remnants.animation = make_rotated_animation_variations_from_sheet (
 local mining_drill_explosion = data.raw["explosion"]["electric-mining-drill-explosion"]
 mining_drill_explosion.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill_explosion.icon_size = 64
-mining_drill_explosion.icon_mipmaps = 4
 mining_drill_explosion.height = 0
 mining_drill_explosion.animations = {
     {
@@ -425,7 +422,6 @@ mining_drill_explosion.created_effect = {
 local mining_drill = data.raw["mining-drill"]["electric-mining-drill"]
 mining_drill.icon = "__semi-classic-mining-drill__/graphics/icon/electric-mining-drill.png"
 mining_drill.icon_size = 64
-mining_drill.icon_mipmaps = 4
 
 mining_drill.graphics_set =
 {
