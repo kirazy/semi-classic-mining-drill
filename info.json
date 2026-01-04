@@ -10,6 +10,7 @@
   [
     "base",
     "? space-age",
-    "! classic-mining-drill"
+    "! classic-mining-drill",
+    "(?) bobmining"
   ]
 }
