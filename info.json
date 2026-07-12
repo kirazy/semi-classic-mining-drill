@@ -1,16 +1,19 @@
 {
-  "name": "semi-classic-mining-drill",
-  "version": "2.1.0",
-  "factorio_version": "2.1",
-  "title": "Semi-Classic Mining Drill",
-  "author": "Kirazy",
-  "contact": "kirazy@live.com",
-  "description": "Replaces the current vanilla mining drill with the first reworked version of the mining drill.",
-  "dependencies":
-  [
-    "base",
-    "? space-age",
-    "! classic-mining-drill",
-    "(?) bobmining"
-  ]
+	"name": "semi-classic-mining-drill",
+	"version": "2.1.0",
+	"factorio_version": "2.1",
+	"title": "Semi-Classic Mining Drill",
+	"author": "Kirazy",
+	"contact": "https://discord.gg/qAvSyzZFPr",
+	"homepage": "https://github.com/kirazy/semi-classic-mining-drill",
+	"description": "Replaces the current vanilla mining drill with the first reworked version of the mining drill.",
+	"dependencies": [
+		"base",
+		"? space-age",
+		"! classic-mining-drill",
+		"(?) bobmining"
+	],
+	"package": {
+		"git_publish_branch": "dev2.1"
+	}
 }
