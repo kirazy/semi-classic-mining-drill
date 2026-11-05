@@ -14,6 +14,6 @@
 		"(?) bobmining"
 	],
 	"package": {
-		"git_publish_branch": "dev2.1"
+		"git_publish_branch": "master"
 	}
 }
